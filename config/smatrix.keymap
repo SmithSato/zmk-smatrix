@@ -169,10 +169,10 @@
 
         layer_5 {
             bindings = <
-&trans            &trans  &trans  &trans  &kp INT_HENKAN  &kp COMMA                    &kp PERIOD    &kp X   &kp Y   &kp PERIOD            &kp NUMBER_0  &trans
-&trans            &trans  &trans  &trans  &kp D           &kp LS(Z)                    &kp A         &kp U   &kp I   &kp NUMBER_4          &kp NUMBER_5  &kp ENTER
-&lt 6 LEFT_SHIFT  &trans  &trans  &trans  &trans          &trans     &trans    &trans  &kp NUMBER_6  &kp Q   &trans  &kp NON_US_BACKSLASH  &kp MINUS     &trans
-&trans            &trans  &trans  &trans  &trans          &trans                       &trans        &trans  &trans  &trans                &trans        &trans
+&trans            &trans  &trans  &trans  &kp INT_HENKAN  &kp COMMA                         &kp PERIOD      &kp X   &kp Y   &kp PERIOD            &kp NUMBER_0  &trans
+&trans            &trans  &trans  &trans  &kp D           &kp LS(Z)                         &kp A           &kp U   &kp I   &kp NUMBER_4          &kp NUMBER_5  &kp ENTER
+&lt 6 LEFT_SHIFT  &trans  &trans  &trans  &trans          &trans          &trans    &trans  &kp NUMBER_6    &kp Q   &trans  &kp NON_US_BACKSLASH  &kp MINUS     &trans
+&trans            &trans  &trans  &trans  &trans          &kp LANGUAGE_2                    &kp LANGUAGE_4  &trans  &trans  &trans                &trans        &trans
             >;
         };
 
