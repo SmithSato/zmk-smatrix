@@ -114,21 +114,10 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q           &kp W     &kp E     &kp R        &kp T                                  &kp Y        &kp U          &kp I      &kp O       &kp P     &kp MINUS
-&kp TAB    &kp A           &kp S     &kp D     &kp F        &kp G                                  &kp H        &kp J          &kp K      &kp L       &kp SEMI  &kp ENTER
-&kp LSHFT  &kp Z           &kp X     &kp C     &kp V        &kp B        &macro_w_TMute    &tog 5  &kp N        &kp M          &kp COMMA  &kp PERIOD  &kp UP    &mt RSHFT SLASH
-&kp LCTRL  &macro_w_sshot  &kp LGUI  &kp LALT  &lt 2 SPACE  &lt 3 LANG2                            &lt 4 LANG4  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN  &kp RIGHT
-            >;
-
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
-        };
-
-        layer_1 {
-            bindings = <
-&mt LCTRL TAB  &kp Q           &kp W     &kp E     &kp R        &kp T                                  &kp Y        &kp U          &kp I      &kp O       &kp P     &kp MINUS
-&kp LGUI       &kp A           &kp S     &kp D     &kp F        &kp G                                  &kp H        &kp J          &kp K      &kp L       &kp SEMI  &kp ENTER
-&kp LSHFT      &kp Z           &kp X     &kp C     &kp V        &kp B        &macro_w_TMute    &tog 1  &kp N        &kp M          &kp COMMA  &kp PERIOD  &kp UP    &mt RSHFT SLASH
-&kp ESC        &macro_m_sshot  &kp LGUI  &kp LALT  &lt 2 SPACE  &lt 3 LANG2                            &lt 4 LANG1  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN  &kp RIGHT
+&kp ESC    &kp Q           &kp W     &kp E     &kp R        &kp T                                 &kp Y        &kp U          &kp I      &kp O       &kp P            &kp MINUS
+&kp TAB    &kp A           &kp S     &kp D     &kp F        &kp G                                 &kp H        &kp J          &kp K      &kp L       &kp SEMI         &kp ENTER
+&kp LSHFT  &kp Z           &kp X     &kp C     &kp V        &kp B        &macro_w_TMute    &to 4  &kp N        &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp UP_ARROW
+&kp LCTRL  &macro_w_sshot  &kp LGUI  &kp LALT  &lt 1 SPACE  &lt 2 LANG2                           &lt 3 LANG1  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp RIGHT_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
@@ -169,20 +158,31 @@
 
         layer_5 {
             bindings = <
-&trans            &trans  &trans  &trans  &kp INT_HENKAN  &kp COMMA                         &kp PERIOD      &kp X   &kp Y   &kp PERIOD            &kp NUMBER_0  &trans
-&trans            &trans  &trans  &trans  &kp D           &kp LS(Z)                         &kp A           &kp U   &kp I   &kp NUMBER_4          &kp NUMBER_5  &kp ENTER
-&lt 6 LEFT_SHIFT  &trans  &trans  &trans  &trans          &trans          &trans    &trans  &kp NUMBER_6    &kp Q   &trans  &kp NON_US_BACKSLASH  &kp MINUS     &trans
-&trans            &trans  &trans  &trans  &trans          &kp LANGUAGE_2                    &kp LANGUAGE_4  &trans  &trans  &trans                &trans        &trans
+&kp ESC         &kp SEMICOLON  &kp O   &trans        &kp INTERNATIONAL_4  &kp COMMA                          &kp PERIOD         &kp X          &kp Y    &kp PERIOD            &kp NUMBER_0     &kp MINUS
+&kp TAB         &kp G          &kp W   &kp W         &kp D                &kp LS(Z)                          &kp NUMBER_3       &kp U          &kp E    &kp NUMBER_4          &kp NUMBER_5     &kp ENTER
+&kp LEFT_SHIFT  &kp V          &kp B   &kp S         &kp T                &kp F             &trans    &to 0  &kp NUMBER_6       &kp Q          &trans   &kp NON_US_BACKSLASH  &kp MINUS        &kp UP_ARROW
+&kp LCTRL       &trans         &trans  &kp LEFT_ALT  &kp SPACE            &lt 5 LEFT_SHIFT                   &lt 5 RIGHT_SHIFT  &kp BACKSPACE  &kp DEL  &kp LEFT_ARROW        &kp RIGHT_ARROW  &kp DOWN_ARROW
             >;
         };
 
         layer_6 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &kp P                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans     &trans  &kp NUMBER_2              &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp A         &kp COMMA  &kp I   &kp LS(LEFT_PARENTHESIS)  &kp P                        &kp R   &kp K   &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_4  &kp L      &kp N   &kp LS(LESS_THAN)         &kp SLASH  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans     &trans  &trans                    &trans                       &trans  &trans  &trans  &trans  &trans  &trans
             >;
+        };
+
+        layer_1 {
+            bindings = <
+&mt LCTRL TAB  &kp Q           &kp W     &kp E     &kp R        &kp T                                  &kp Y        &kp U          &kp I      &kp O       &kp P     &kp MINUS
+&kp LGUI       &kp A           &kp S     &kp D     &kp F        &kp G                                  &kp H        &kp J          &kp K      &kp L       &kp SEMI  &kp ENTER
+&kp LSHFT      &kp Z           &kp X     &kp C     &kp V        &kp B        &macro_w_TMute    &tog 6  &kp N        &kp M          &kp COMMA  &kp PERIOD  &kp UP    &mt RSHFT SLASH
+&kp ESC        &macro_m_sshot  &kp LGUI  &kp LALT  &lt 1 SPACE  &lt 2 LANG2                            &lt 3 LANG1  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN  &kp RIGHT
+            >;
+
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
         };
     };
 };
