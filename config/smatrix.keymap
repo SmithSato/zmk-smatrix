@@ -165,14 +165,7 @@
     macros {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        Syo {
-            bindings = <&Syo>;
-            key-positions = <16 8>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
