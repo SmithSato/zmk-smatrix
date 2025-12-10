@@ -115,12 +115,63 @@
         lang2set: lang2set {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &lt 5 LANG2>;
+            bindings = <&to 0 &lt 2 LANG2>;
             label = "LANG2SET";
+        };
+
+        pe: pe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>;
+            label = "PE";
+        };
+
+        pi: pi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>;
+            label = "PI";
+        };
+
+        pa: pa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>;
+            label = "PA";
+        };
+
+        po: po {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>;
+            label = "PO";
+        };
+
+        ba: ba {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>;
+            label = "BA";
+        };
+
+        Syo: Syo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp LEFT_PARENTHESIS>;
+            label = "SYO";
         };
     };
 
     macros {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Syo {
+            bindings = <&Syo>;
+            key-positions = <16 8>;
+        };
     };
 
     keymap {
@@ -131,39 +182,10 @@
 &kp ESC    &kp Q      &kp W     &kp E     &kp R        &kp T                               &kp Y      &kp U          &kp I      &kp O       &kp P            &kp MINUS
 &kp TAB    &kp A      &kp S     &kp D     &kp F        &kp G                               &kp H      &kp J          &kp K      &kp L       &kp SEMI         &kp ENTER
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V        &kp B      &macro_w_TMute    &to 0  &kp N      &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp UP_ARROW
-&kp LCTRL  &lang2set  &kp LGUI  &kp LALT  &lt 2 SPACE  &lang1set                           &lang1set  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp RIGHT_ARROW  &kp DOWN_ARROW
+&kp LCTRL  &lang2set  &kp LGUI  &kp LALT  &lt 0 SPACE  &lang1set                           &lang1set  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp RIGHT_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
-        };
-
-        layer_1 {
-            bindings = <
-&mt LCTRL TAB  &kp Q           &kp W     &kp E     &kp R        &kp T                                  &kp Y        &kp U          &kp I      &kp O       &kp P     &kp MINUS
-&kp LGUI       &kp A           &kp S     &kp D     &kp F        &kp G                                  &kp H        &kp J          &kp K      &kp L       &kp SEMI  &kp ENTER
-&kp LSHFT      &kp Z           &kp X     &kp C     &kp V        &kp B        &macro_w_TMute    &tog 4  &kp N        &kp M          &kp COMMA  &kp PERIOD  &kp UP    &mt RSHFT SLASH
-&kp ESC        &macro_m_sshot  &kp LGUI  &kp LALT  &lt 0 SPACE  &lt 1 LANG2                            &lt 2 LANG1  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN  &kp RIGHT
-            >;
-
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
         };
 
         Sign {
@@ -188,6 +210,35 @@
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_click MB5 MB4>;
         };
 
+        layer_1 {
+            bindings = <
+&mt LCTRL TAB  &kp Q           &kp W     &kp E     &kp R        &kp T                                  &kp Y        &kp U          &kp I      &kp O       &kp P     &kp MINUS
+&kp LGUI       &kp A           &kp S     &kp D     &kp F        &kp G                                  &kp H        &kp J          &kp K      &kp L       &kp SEMI  &kp ENTER
+&kp LSHFT      &kp Z           &kp X     &kp C     &kp V        &kp B        &macro_w_TMute    &tog 0  &kp N        &kp M          &kp COMMA  &kp PERIOD  &kp UP    &mt RSHFT SLASH
+&kp ESC        &macro_m_sshot  &kp LGUI  &kp LALT  &lt 0 SPACE  &lt 0 LANG2                            &lt 0 LANG1  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp DOWN  &kp RIGHT
+            >;
+
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
+        };
+
+        Dakuten {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Handakuten {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         Fanction {
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                          &kp F12  &kp F7  &kp F8  &kp F9  &trans  &trans
@@ -201,19 +252,19 @@
 
         Kana {
             bindings = <
-&kp ESC         &kp SEMICOLON  &kp O   &trans        &kp INTERNATIONAL_4  &kp COMMA                   &kp PERIOD    &kp X          &kp Y    &kp PERIOD            &kp NUMBER_0     &kp MINUS
-&kp TAB         &kp G          &kp W   &kp W         &kp D                &kp LS(Z)                   &kp NUMBER_3  &kp U          &kp E    &kp NUMBER_4          &kp NUMBER_5     &kp ENTER
-&kp LEFT_SHIFT  &kp V          &kp B   &kp S         &kp T                &kp F      &trans    &to 0  &kp NUMBER_6  &kp Q          &trans   &kp NON_US_BACKSLASH  &kp MINUS        &kp UP_ARROW
-&kp LCTRL       &lang2set      &trans  &kp LEFT_ALT  &trans               &lang1set                   &lang1set     &kp BACKSPACE  &kp DEL  &kp LEFT_ARROW        &kp RIGHT_ARROW  &kp DOWN_ARROW
+&kp ESC         &kp SEMICOLON  &kp O   &trans        &kp INTERNATIONAL_4  &kp COMMA                   &kp PERIOD    &kp X          &kp Y             &kp PERIOD            &kp NUMBER_0     &kp MINUS
+&kp TAB         &kp G          &kp W   &kp W         &kp D                &kp LS(Z)                   &kp NUMBER_3  &kp U          &kp E             &kp NUMBER_4          &kp NUMBER_5     &kp ENTER
+&kp LEFT_SHIFT  &kp V          &kp B   &kp S         &kp T                &kp F      &trans    &to 0  &kp NUMBER_6  &kp Q          &kp LEFT_BRACKET  &kp NON_US_BACKSLASH  &kp MINUS        &kp UP_ARROW
+&kp LCTRL       &lang2set      &trans  &kp LEFT_ALT  &trans               &lang1set                   &lang1set     &kp BACKSPACE  &kp DEL           &kp LEFT_ARROW        &kp RIGHT_ARROW  &kp DOWN_ARROW
             >;
         };
 
         Kana2 {
             bindings = <
-&trans  &kp EQUAL     &kp SQT    &trans  &kp NUMBER_2              &trans                       &trans  &kp M              &kp N9  &kp C   &kp N8        &trans
-&trans  &kp A         &kp COMMA  &kp I   &kp LS(LEFT_PARENTHESIS)  &kp P                        &kp R   &kp K              &kp H   &kp Z   &kp GRAVE     &trans
-&trans  &kp NUMBER_4  &kp L      &kp N   &kp LS(LESS_THAN)         &kp SLASH  &trans    &trans  &kp J   &kp RIGHT_BRACKET  &trans  &kp N7  &kp NUMBER_1  &trans
-&trans  &trans        &trans     &trans  &trans                    &trans                       &trans  &trans             &trans  &trans  &trans        &trans
+&trans  &kp EQUAL     &kp SQT    &trans  &kp NUMBER_2              &trans                       &trans  &kp M             &kp N9             &kp C   &kp N8        &trans
+&trans  &kp A         &kp COMMA  &kp I   &kp LS(LEFT_PARENTHESIS)  &kp P                        &kp R   &kp K             &kp H              &kp Z   &kp GRAVE     &trans
+&trans  &kp NUMBER_4  &kp L      &kp N   &kp LS(LESS_THAN)         &kp SLASH  &trans    &trans  &kp J   &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp N7  &kp NUMBER_1  &trans
+&trans  &trans        &trans     &trans  &trans                    &trans                       &trans  &trans            &trans             &trans  &trans        &trans
             >;
         };
     };
