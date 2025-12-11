@@ -178,7 +178,9 @@
 &kp LCTRL  &lang2set  &kp LGUI  &kp LALT  &lt 0 SPACE  &lang1set                           &lang1set  &kp BACKSPACE  &kp DEL    &kp LEFT    &kp RIGHT_ARROW  &kp DOWN_ARROW
             >;
 
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_UP SCRL_DOWN>;
+            sensor-bindings =
+                <&rot_kp LEFT_BRACKET RIGHT_BRACKET>,
+                <&mouse_scrl SCRL_UP SCRL_DOWN>;
         };
 
         Sign {
