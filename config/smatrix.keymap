@@ -115,83 +115,98 @@
         lang2set: lang2set {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &lt 2 LANG2>;
+            bindings = <&to 0 &lt 1 LANG2>;
             label = "LANG2SET";
         };
 
         pe: pe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp CARET>;
             label = "PE";
         };
 
         pi: pi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp V>;
             label = "PI";
         };
 
         pa: pa {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp F>;
             label = "PA";
         };
 
         po: po {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_BRACKET>;
+            bindings = <&kp MINUS>;
             label = "PO";
         };
 
         ba: ba {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>;
+            bindings = <&kp F>;
             label = "BA";
         };
 
         Syo: Syo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp LEFT_PARENTHESIS>;
+            bindings = <&kp D &kp LS(N9)>;
             label = "SYO";
+        };
+
+        vu: vu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4 &kp AT_SIGN>;
+            label = "VU";
+        };
+
+        langkommma: langkommma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp COMMA &kp LANG1>;
+            label = "LANGKOMMMA";
         };
     };
 
     macros {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        lang2 {
+            bindings = <&lang2set>;
+            key-positions = <24 43>;
+        };
+
+        lang2r {
+            bindings = <&lang2set>;
+            key-positions = <24 44>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC    &kp Q      &kp W     &kp E     &kp R        &kp T                               &kp Y      &kp U        &kp I      &kp O       &kp P            &kp BACKSPACE
-&kp TAB    &kp A      &kp S     &kp D     &kp F        &kp G                               &kp H      &kp J        &kp K      &kp L       &kp SEMI         &kp ENTER
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V        &kp B      &macro_w_TMute    &to 0  &kp N      &kp M        &kp COMMA  &kp PERIOD  &kp SLASH        &kp UP_ARROW
-&kp LCTRL  &lang2set  &kp LGUI  &kp LALT  &lt 2 SPACE  &lang1set                           &lang1set  &lt 1 UNDER  &kp DEL    &kp LEFT    &kp RIGHT_ARROW  &kp DOWN_ARROW
+&kp ESC    &kp Q  &kp W     &kp E     &kp R        &kp T                               &kp Y      &kp U          &kp I      &kp O       &kp P            &kp DEL
+&kp TAB    &kp A  &kp S     &kp D     &kp F        &kp G                               &kp H      &kp J          &kp K      &kp L       &kp SEMI         &kp ENTER
+&kp LSHFT  &kp Z  &kp X     &kp C     &kp V        &kp B      &macro_w_TMute    &to 0  &kp N      &kp M          &kp COMMA  &kp PERIOD  &kp SLASH        &kp UP_ARROW
+&kp LCTRL  &to 7  &kp LGUI  &kp LALT  &lt 1 SPACE  &lang1set                           &lang1set  &kp BACKSPACE  &mo 2      &kp LEFT    &kp RIGHT_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings =
                 <&rot_kp LEFT_BRACKET RIGHT_BRACKET>,
                 <&mouse_scrl SCRL_UP SCRL_DOWN>;
-        };
-
-        Sign {
-            bindings = <
-&trans  &kp EXCL  &kp AT    &kp EQUAL   &kp APOS   &kp TILDE                    &trans  &trans  &kp LPAR  &kp RPAR  &kp PERCENT  &kp PIPE
-&trans  &kp AMPS  &kp HASH  &kp DOLLAR  &kp DQT    &trans                       &trans  &trans  &kp LBKT  &kp RBKT  &trans       &trans
-&trans  &trans    &trans    &kp CARET   &kp GRAVE  &trans     &trans    &trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp PG_UP    &kp BSLH
-&trans  &trans    &trans    &trans      &trans     &trans                       &trans  &trans  &trans    &kp HOME  &kp PG_DN    &kp END
-            >;
-
-            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
         Num {
@@ -203,6 +218,17 @@
             >;
 
             sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_click MB5 MB4>;
+        };
+
+        Sign {
+            bindings = <
+&trans  &kp EXCL  &kp AT    &kp EQUAL   &kp APOS   &kp TILDE                    &trans  &trans  &kp LPAR  &kp RPAR  &kp PERCENT  &kp PIPE
+&trans  &kp AMPS  &kp HASH  &kp DOLLAR  &kp DQT    &trans                       &trans  &trans  &kp LBKT  &kp RBKT  &trans       &trans
+&trans  &trans    &trans    &kp CARET   &kp GRAVE  &trans     &trans    &trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp PG_UP    &kp BSLH
+&trans  &trans    &trans    &trans      &trans     &trans                       &trans  &trans  &trans    &kp HOME  &kp PG_DN    &kp END
+            >;
+
+            sensor-bindings = <&rot_kp C_VOL_UP C_VOL_DN    &mouse_scrl SCRL_LEFT SCRL_RIGHT>;
         };
 
         Fanction {
@@ -218,20 +244,40 @@
 
         Kana {
             bindings = <
-&trans  &kp SEMICOLON  &kp O   &trans  &kp INTERNATIONAL_4  &kp KP_COMMA                   &kp KP_DOT    &kp X   &kp Y             &kp PERIOD            &kp NUMBER_0  &trans
-&trans  &kp LS(MINUS)  &kp G   &kp W   &kp D                &kp LS(Z)                      &kp NUMBER_3  &kp U   &kp E             &kp NUMBER_4          &kp NUMBER_5  &trans
-&trans  &kp V          &kp B   &kp S   &kp T                &kp F         &trans    &to 0  &kp NUMBER_6  &kp Q   &kp LEFT_BRACKET  &kp NON_US_BACKSLASH  &kp MINUS     &trans
-&trans  &lang2set      &trans  &trans  &trans               &lt 5 LANG1                    &lt 5 LANG1   &trans  &trans            &trans                &trans        &trans
+&trans  &kp SEMICOLON  &kp O   &kp INT5  &kp INTERNATIONAL_4  &langkommma                   &kp KP_DOT    &kp X   &kp Y        &kp PERIOD    &kp NUMBER_0  &trans
+&trans  &kp INT3       &kp G   &kp W     &kp D                &kp LS(Z)                     &kp NUMBER_3  &kp U   &kp E        &kp NUMBER_4  &kp N5        &trans
+&trans  &kp V          &kp B   &kp S     &kp T                &kp F        &trans    &to 0  &kp NUMBER_6  &kp Q   &kp AT_SIGN  &kp NUMBER_7  &kp MINUS     &trans
+&trans  &lang2set      &trans  &trans    &trans               &lt 5 LANG1                   &lt 5 LANG1   &trans  &trans       &trans        &trans        &trans
             >;
         };
 
         Kana2 {
             bindings = <
-&trans  &kp EQUAL     &kp SQT    &trans  &kp NUMBER_2              &trans                       &trans  &kp M             &kp N9             &kp C   &kp N8        &trans
-&trans  &kp A         &kp COMMA  &kp I   &kp LS(LEFT_PARENTHESIS)  &kp P                        &kp R   &kp K             &kp H              &kp Z   &kp GRAVE     &trans
-&trans  &kp NUMBER_4  &kp L      &kp N   &kp LS(LESS_THAN)         &kp SLASH  &trans    &trans  &kp J   &kp GREATER_THAN  &kp RIGHT_BRACKET  &kp N7  &kp NUMBER_1  &trans
-&trans  &trans        &trans     &trans  &trans                    &trans                       &trans  &trans            &trans             &trans  &trans        &trans
+&trans  &kp LCTRL  &kp COLON  &trans  &kp NUMBER_2           &trans                       &trans  &kp M       &kp N9            &kp C   &kp N8        &trans
+&trans  &kp A      &kp COMMA  &kp I   &kp LS(N0)             &kp P                        &kp R   &kp K       &kp H             &kp Z   &kp INT1      &trans
+&trans  &vu        &kp L      &kp N   &kp LS(INT_KPJPCOMMA)  &kp SLASH  &trans    &trans  &kp J   &kp PERIOD  &kp LEFT_BRACKET  &kp N7  &kp NUMBER_1  &trans
+&trans  &trans     &trans     &trans  &trans                 &trans                       &trans  &trans      &trans            &trans  &trans        &trans
             >;
+        };
+
+        dakuten {
+            bindings = <
+&trans  &kp SEMICOLON  &kp O   &kp INT5  &kp INTERNATIONAL_4  &langkommma                   &kp KP_DOT    &kp X   &kp Y        &kp PERIOD    &kp NUMBER_0  &trans
+&trans  &kp MINUS      &kp G   &kp W     &kp D                &kp LS(Z)                     &kp NUMBER_3  &kp U   &kp E        &kp NUMBER_4  &none         &trans
+&trans  &kp V          &kp B   &kp S     &kp T                &kp F        &trans    &to 0  &kp NUMBER_6  &kp Q   &kp AT_SIGN  &kp NUMBER_7  &kp MINUS     &trans
+&trans  &lang2set      &trans  &trans    &trans               &lt 5 LANG1                   &lt 5 LANG1   &trans  &trans       &trans        &trans        &trans
+            >;
+        };
+
+        oekaki {
+            bindings = <
+&kp LC(S)  &kp LC(E)  &kp AT_SIGN  &kp P   &kp LC(Z)  &kp LC(Y)                    &trans  &trans  &trans  &trans  &trans  &to 0
+&trans     &kp M      &kp N        &kp B   &kp LBKT   &kp RBKT                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &kp E        &kp G   &kp MINUS  &kp CARET  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans       &trans  &kp SPACE  &kp LC(Z)                    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
         };
     };
 };
