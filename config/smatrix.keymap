@@ -218,10 +218,10 @@
 
         Kana {
             bindings = <
-&trans  &kp SEMICOLON  &kp O   &trans  &kp INTERNATIONAL_4  &kp COMMA                     &kp PERIOD    &kp X   &kp Y             &kp PERIOD            &kp NUMBER_0  &trans
-&trans  &kp G          &kp W   &kp W   &kp D                &kp LS(Z)                     &kp NUMBER_3  &kp U   &kp E             &kp NUMBER_4          &kp NUMBER_5  &trans
-&trans  &kp V          &kp B   &kp S   &kp T                &kp F        &trans    &to 0  &kp NUMBER_6  &kp Q   &kp LEFT_BRACKET  &kp NON_US_BACKSLASH  &kp MINUS     &trans
-&trans  &lang2set      &trans  &trans  &trans               &lt 5 LANG1                   &lt 5 LANG1   &trans  &trans            &trans                &trans        &trans
+&trans  &kp SEMICOLON  &kp O   &trans  &kp INTERNATIONAL_4  &kp KP_COMMA                   &kp KP_DOT    &kp X   &kp Y             &kp PERIOD            &kp NUMBER_0  &trans
+&trans  &kp LS(MINUS)  &kp G   &kp W   &kp D                &kp LS(Z)                      &kp NUMBER_3  &kp U   &kp E             &kp NUMBER_4          &kp NUMBER_5  &trans
+&trans  &kp V          &kp B   &kp S   &kp T                &kp F         &trans    &to 0  &kp NUMBER_6  &kp Q   &kp LEFT_BRACKET  &kp NON_US_BACKSLASH  &kp MINUS     &trans
+&trans  &lang2set      &trans  &trans  &trans               &lt 5 LANG1                    &lt 5 LANG1   &trans  &trans            &trans                &trans        &trans
             >;
         };
 
