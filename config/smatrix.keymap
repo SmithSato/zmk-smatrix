@@ -278,10 +278,10 @@
 
         oekaki {
             bindings = <
-&kp LC(S)  &kp LC(E)  &kp E   &kp P   &kp MINUS          &kp EQUAL                        &trans  &trans  &trans  &trans  &trans  &to 0
-&trans     &kp LC(D)  &kp M   &kp B   &kp RIGHT_BRACKET  &kp BACKSLASH                    &trans  &trans  &trans  &trans  &trans  &trans
-&mo 8      &none      &kp X   &kp G   &kp NUMBER_1       &kp NUMBER_2   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans     &trans  &trans  &kp SPACE          &kp LC(Z)                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LC(S)  &kp LC(E)  &kp E   &kp P   &kp MINUS          &kp EQUAL                        &trans     &trans  &trans  &trans  &trans  &to 0
+&trans     &kp LC(D)  &kp M   &kp B   &kp RIGHT_BRACKET  &kp BACKSLASH                    &trans     &trans  &trans  &trans  &trans  &trans
+&mo 8      &none      &kp X   &kp G   &kp NUMBER_1       &kp NUMBER_2   &trans    &trans  &trans     &trans  &trans  &trans  &trans  &trans
+&trans     &to 0      &trans  &trans  &kp SPACE          &kp LC(Z)                        &lang1set  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
