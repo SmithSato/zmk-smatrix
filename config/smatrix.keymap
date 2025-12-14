@@ -272,7 +272,7 @@
         oekaki {
             bindings = <
 &kp LC(S)  &kp LC(E)  &kp E   &kp P   &kp MINUS          &kp EQUAL                        &trans  &trans  &trans  &trans  &trans  &to 0
-&trans     &kp M      &none   &kp B   &kp RIGHT_BRACKET  &kp BACKSLASH                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp LC(D)  &kp M   &kp B   &kp RIGHT_BRACKET  &kp BACKSLASH                    &trans  &trans  &trans  &trans  &trans  &trans
 &mo 8      &none      &kp X   &kp G   &kp NUMBER_1       &kp NUMBER_2   &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans     &trans     &trans  &trans  &kp SPACE          &kp LC(Z)                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
