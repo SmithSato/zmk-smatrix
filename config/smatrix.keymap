@@ -289,10 +289,10 @@
 
         oekaki2 {
             bindings = <
-&trans  &trans  &trans  &kp LEFT_BRACKET  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp N             &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp NUMBER_3      &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans            &trans  &kp LC(Y)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &kp LEFT_BRACKET  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(X)  &trans     &kp N             &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(C)  &kp LC(V)  &kp NUMBER_3      &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans            &trans  &kp LC(Y)                    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
