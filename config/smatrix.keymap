@@ -191,12 +191,12 @@
 
         lang2 {
             bindings = <&lang2set>;
-            key-positions = <43 24>;
+            key-positions = <43 38>;
         };
 
         lang2r {
             bindings = <&lang2set>;
-            key-positions = <44 24>;
+            key-positions = <44 38>;
         };
     };
 
